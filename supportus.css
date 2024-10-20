@@ -1,0 +1,341 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff0f3;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff0f3;
+    padding: 25px 8%;
+    position: relative;
+}
+
+.logo-navigasi img{
+    width: 180px;
+    height: auto;
+}
+
+.navbar {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: #595758;
+    font-size: 14px;
+    transition: color 0.3s ease;
+    font-family: "Lexend", sans-serif;
+}
+
+.navbar li a:hover {
+    color: #c9184a;
+    font-weight: bolder;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-icon i {
+    color: #c9184a;
+    font-size: 34px;
+}
+
+#menu-checkbox {
+    display: none;
+}
+
+.container {
+    width: 40%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border: 1px solid #c9184a;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px 15px 15px 15px;
+    margin-top: 20px;
+}
+
+.header {
+    background-color: #c9184a;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.header h1 {
+    font-family: "Lobster", sans-serif;
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.subtitle {
+    text-align: center;
+    font-family: "Lexend", sans-serif;
+    color: #343a40;
+    font-size: 14px;
+    margin: 25px 0 0 0;
+}
+
+.input-container {
+    padding: 20px 0 0 0;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin: 18px 5px;
+}
+
+.input-group label {
+    font-family: "Lexend", sans-serif;
+    color: #343a40;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: left;
+    margin-bottom: 8px;
+}
+
+.input-group input {
+    background-color: transparent;
+    border: 2px solid #c9184a;
+    border-radius: 8px;
+    color: #343a40;
+    width: 100%;
+    height: 40px;
+    padding: 15px;
+    font-size: 14px;
+    font-family: "Lexend", sans-serif
+}
+
+.input-group textarea {
+    background-color: transparent;
+    border: 2px solid #c9184a;
+    border-radius: 8px;
+    color: #343a40;
+    width: 100%;
+    height: 100px;
+    padding: 15px;
+    font-size: 14px;
+    font-family: "Lexend", sans-serif;
+}
+
+.button-suggest {
+    text-align: center;
+}
+
+button {
+    background-color: #c9184a;
+    color: #fff0f3;
+    border: none;
+    width: 100%;
+    padding: 10px;
+    font-family: "Lexend", sans-serif;
+    font-size: 16px;
+    border-radius: 8px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ffccd5;
+    color: #c9184a;
+}
+
+.result {
+    color: #343a40;
+    font-family: "Lexend", sans-serif;
+    font-size: 16px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff0f3;
+    padding: 60px 120px 30px 120px;
+}
+
+.logo-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-footer img {
+    width: 150px;
+    height: auto;
+}
+
+.logo-footer p {
+    font-size: 12px;
+    font-family: "Lexend", sans-serif;
+}
+
+.footer-nav {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.footer-nav li a {
+    text-decoration: none;
+    color: #595758;
+    font-size: 14px;
+    transition: color 0.3s ease;
+    font-family: "Lexend", sans-serif;
+}
+
+.footer-nav li a:hover {
+    color: #c9184a;
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+.icon-footer {
+    display: flex;
+    gap: 20px;
+}
+
+.icon-footer i {
+    font-size: 26px;
+    height: auto;
+    color: #c9184a;
+}
+
+.icon-footer i:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 720px) {
+    nav {
+        padding: 10px 8%;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #c9184a;
+        flex-direction: column;
+        align-items: center;
+        z-index: 1;
+        overflow: hidden;
+        transition: .3s ease;
+        gap: 30px;
+        padding: 40px 0;
+    }
+
+    .logo-navigasi img{
+        width: 150px;
+        height: auto;
+        margin-top: 10px;
+    }
+
+    #menu-checkbox:checked~.navbar {
+        display: flex;
+    }
+
+    .navbar li a {
+        display: block;
+        color: #fff0f3;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .navbar li a:hover {
+        color: #fff0f3;
+        font-weight: bolder;
+    }
+
+    .container {
+        width: 80%;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 0;
+        align-items: center;
+        margin-top: 50px;
+    }
+    
+    .logo-footer {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 35px;
+    }
+    
+    .logo-footer img {
+        width: 150px;
+        height: auto;
+        align-items: center;
+        margin-bottom: 5px;
+    }
+    
+    .logo-footer p {
+        font-size: 12px;
+        font-family: "Lexend", sans-serif;
+        text-align: center;
+    }
+
+    .footer-nav {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        margin-bottom: 35px;
+        align-items: center;
+    }
+    
+    .footer-nav li a {
+        text-decoration: none;
+        color: #595758;
+        font-size: 14px;
+        transition: color 0.3s ease;
+        font-family: "Lexend", sans-serif;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .footer-nav li a:hover {
+        color: #c9184a;
+        font-size: 14px;
+        font-weight: bolder;
+    }
+    
+    .icon-footer {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+    
+    .icon-footer i {
+        font-size: 22px;
+        height: auto;
+        color: #c9184a;
+    }
+    
+    .icon-footer i:hover {
+        cursor: pointer;
+    }
+}
